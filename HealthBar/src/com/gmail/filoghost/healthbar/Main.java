@@ -51,7 +51,7 @@ public class Main extends JavaPlugin {
 		miscListeners = new MiscListeners();
 		
 		//to check if I've forgot the debug on :)
-		Debug.color("§c[HealthBar] Debug ON");		
+		Debug.color("Â§c[HealthBar] Debug ON");		
 		
 		//create the folder and the file
 		if (getDataFolder().exists()) {
@@ -70,7 +70,7 @@ public class Main extends JavaPlugin {
 		
 		
 		//try to check updates
-		Updater.UpdaterHandler.setup(this, 54447, "§2[§aHealthBar§2] ", super.getFile(), ChatColor.GREEN, "/hbr update", "health-bar");
+		Updater.UpdaterHandler.setup(this, 54447, "Â§2[Â§aHealthBarÂ§2] ", super.getFile(), ChatColor.GREEN, "/hbr update", "health-bar");
 		
 		if (config.getBoolean("update-notification")) {
 			Thread updaterThread = new Thread(new Runnable() { public void run() {
@@ -106,7 +106,7 @@ public class Main extends JavaPlugin {
 	public void reloadConfigFromDisk() {
 		
 		reloadConfig();
-		//Utils.checkDefaultNodes(getConfig(), this);
+		Utils.checkDefaultNodes(getConfig(), this);
 		Configuration.checkConfigYML();
 		
 		Utils.loadFile("custom-mob-bar.yml", this);
